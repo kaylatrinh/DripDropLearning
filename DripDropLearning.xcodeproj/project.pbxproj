@@ -21,6 +21,14 @@
 		EF1A2BC92A412D11002C8CCA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BC82A412D11002C8CCA /* RegisterViewController.swift */; };
 		EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C0A2A412F7C002C8CCA /* ProfileView.swift */; };
 		EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C0C2A412F8C002C8CCA /* ProfileViewController.swift */; };
+		EF1A2C132A413306002C8CCA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C122A413306002C8CCA /* SavedViewController.swift */; };
+		EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C142A413312002C8CCA /* SavedView.swift */; };
+		EF1A2C172A413331002C8CCA /* BathtubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C162A413331002C8CCA /* BathtubView.swift */; };
+		EF1A2C192A4133B2002C8CCA /* BathtubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C182A4133B2002C8CCA /* BathtubViewController.swift */; };
+		EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */; };
+		EF1A2C1D2A4133C9002C8CCA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */; };
+		EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */; };
+		EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,14 @@
 		EF1A2BC82A412D11002C8CCA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EF1A2C0A2A412F7C002C8CCA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EF1A2C0C2A412F8C002C8CCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF1A2C122A413306002C8CCA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		EF1A2C142A413312002C8CCA /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		EF1A2C162A413331002C8CCA /* BathtubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubView.swift; sourceTree = "<group>"; };
+		EF1A2C182A4133B2002C8CCA /* BathtubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubViewController.swift; sourceTree = "<group>"; };
+		EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,9 @@
 				EF1A2BC52A412C88002C8CCA /* Register Screen */,
 				EF1A2BC12A411EA7002C8CCA /* Login Screen */,
 				EF1A2C092A412F5E002C8CCA /* Profile Screen */,
+				EF1A2C112A4132E9002C8CCA /* Saved Screen */,
+				EF1A2C102A4132DE002C8CCA /* Bathtubs Screen */,
+				EF1A2C0E2A4132B8002C8CCA /* Home Screen */,
 				EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */,
 				EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */,
 				EF1A2B952A3D595D002C8CCA /* Main.storyboard */,
@@ -164,6 +183,43 @@
 				EF1A2C0C2A412F8C002C8CCA /* ProfileViewController.swift */,
 			);
 			path = "Profile Screen";
+			sourceTree = "<group>";
+		};
+		EF1A2C0E2A4132B8002C8CCA /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */,
+				EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */,
+				EF1A2C0F2A4132C6002C8CCA /* Filter Screen */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		EF1A2C0F2A4132C6002C8CCA /* Filter Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */,
+				EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */,
+			);
+			path = "Filter Screen";
+			sourceTree = "<group>";
+		};
+		EF1A2C102A4132DE002C8CCA /* Bathtubs Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A2C162A413331002C8CCA /* BathtubView.swift */,
+				EF1A2C182A4133B2002C8CCA /* BathtubViewController.swift */,
+			);
+			path = "Bathtubs Screen";
+			sourceTree = "<group>";
+		};
+		EF1A2C112A4132E9002C8CCA /* Saved Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A2C142A413312002C8CCA /* SavedView.swift */,
+				EF1A2C122A413306002C8CCA /* SavedViewController.swift */,
+			);
+			path = "Saved Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +354,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1A2B942A3D595D002C8CCA /* ViewController.swift in Sources */,
+				EF1A2C1D2A4133C9002C8CCA /* HomeView.swift in Sources */,
 				EF1A2BC72A412D03002C8CCA /* RegisterView.swift in Sources */,
 				EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */,
+				EF1A2C132A413306002C8CCA /* SavedViewController.swift in Sources */,
+				EF1A2C172A413331002C8CCA /* BathtubView.swift in Sources */,
 				EF1A2BC92A412D11002C8CCA /* RegisterViewController.swift in Sources */,
 				EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */,
+				EF1A2C192A4133B2002C8CCA /* BathtubViewController.swift in Sources */,
+				EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */,
+				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
 				EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */,
 				EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */,
+				EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */,
+				EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */,
 				EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
