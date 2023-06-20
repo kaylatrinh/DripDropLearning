@@ -16,6 +16,7 @@
 		EF1A2BA72A3D595F002C8CCA /* DripDropLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BA62A3D595F002C8CCA /* DripDropLearningTests.swift */; };
 		EF1A2BB12A3D595F002C8CCA /* DripDropLearningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BB02A3D595F002C8CCA /* DripDropLearningUITests.swift */; };
 		EF1A2BB32A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BB22A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift */; };
+		EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BC22A412010002C8CCA /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EF1A2BAC2A3D595F002C8CCA /* DripDropLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DripDropLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1A2BB02A3D595F002C8CCA /* DripDropLearningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripDropLearningUITests.swift; sourceTree = "<group>"; };
 		EF1A2BB22A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripDropLearningUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF1A2BC22A412010002C8CCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		EF1A2B8E2A3D595D002C8CCA /* DripDropLearning */ = {
 			isa = PBXGroup;
 			children = (
+				EF1A2BC12A411EA7002C8CCA /* Login Screen */,
 				EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */,
 				EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */,
-				EF1A2B932A3D595D002C8CCA /* ViewController.swift */,
 				EF1A2B952A3D595D002C8CCA /* Main.storyboard */,
 				EF1A2B982A3D595F002C8CCA /* Assets.xcassets */,
 				EF1A2B9A2A3D595F002C8CCA /* LaunchScreen.storyboard */,
@@ -125,6 +127,15 @@
 				EF1A2BB22A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift */,
 			);
 			path = DripDropLearningUITests;
+			sourceTree = "<group>";
+		};
+		EF1A2BC12A411EA7002C8CCA /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A2BC22A412010002C8CCA /* LoginView.swift */,
+				EF1A2B932A3D595D002C8CCA /* ViewController.swift */,
+			);
+			path = "Login Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				EF1A2B942A3D595D002C8CCA /* ViewController.swift in Sources */,
 				EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */,
+				EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */,
 				EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
