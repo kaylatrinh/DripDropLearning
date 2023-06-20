@@ -17,6 +17,8 @@
 		EF1A2BB12A3D595F002C8CCA /* DripDropLearningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BB02A3D595F002C8CCA /* DripDropLearningUITests.swift */; };
 		EF1A2BB32A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BB22A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift */; };
 		EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BC22A412010002C8CCA /* LoginView.swift */; };
+		EF1A2BC72A412D03002C8CCA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BC62A412D03002C8CCA /* RegisterView.swift */; };
+		EF1A2BC92A412D11002C8CCA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2BC82A412D11002C8CCA /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		EF1A2BB02A3D595F002C8CCA /* DripDropLearningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripDropLearningUITests.swift; sourceTree = "<group>"; };
 		EF1A2BB22A3D595F002C8CCA /* DripDropLearningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripDropLearningUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF1A2BC22A412010002C8CCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EF1A2BC62A412D03002C8CCA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EF1A2BC82A412D11002C8CCA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		EF1A2B8E2A3D595D002C8CCA /* DripDropLearning */ = {
 			isa = PBXGroup;
 			children = (
+				EF1A2BC52A412C88002C8CCA /* Register Screen */,
 				EF1A2BC12A411EA7002C8CCA /* Login Screen */,
 				EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */,
 				EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */,
@@ -136,6 +141,15 @@
 				EF1A2B932A3D595D002C8CCA /* ViewController.swift */,
 			);
 			path = "Login Screen";
+			sourceTree = "<group>";
+		};
+		EF1A2BC52A412C88002C8CCA /* Register Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A2BC62A412D03002C8CCA /* RegisterView.swift */,
+				EF1A2BC82A412D11002C8CCA /* RegisterViewController.swift */,
+			);
+			path = "Register Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1A2B942A3D595D002C8CCA /* ViewController.swift in Sources */,
+				EF1A2BC72A412D03002C8CCA /* RegisterView.swift in Sources */,
 				EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */,
+				EF1A2BC92A412D11002C8CCA /* RegisterViewController.swift in Sources */,
 				EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */,
 				EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */,
 			);
