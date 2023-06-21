@@ -9,26 +9,19 @@ import UIKit
 
 class HomeView: UIView {
 
-    var titleLabel: UILabel!
     var imageView: UIImageView!
     var tableView: UITableView!
     var navigationBar: UINavigationBar!
-    var button1: UIBarButtonItem!
-    var button2: UIBarButtonItem!
-    var button3: UIBarButtonItem!
-    var button4: UIBarButtonItem!
+    var homeButton: UIBarButtonItem!
+    var bathtubButton: UIBarButtonItem!
+    var bookmarkButton: UIBarButtonItem!
+    var profileButton: UIBarButtonItem!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
         
-        // Title Label
-        titleLabel = UILabel()
-        titleLabel.text = "Home"
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(titleLabel)
+    
         
         // Image View
         imageView = UIImageView()
@@ -40,9 +33,11 @@ class HomeView: UIView {
         
         // Table View
         tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableViewActivityCell.self, forCellReuseIdentifier: "activity")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
+        
+        
         
         // Navigation Bar
         navigationBar = UINavigationBar()
@@ -50,29 +45,76 @@ class HomeView: UIView {
         addSubview(navigationBar)
         
         // Buttons
-        button1 = UIBarButtonItem(title: "Button 1", style: .plain, target: nil, action: nil)
-        button2 = UIBarButtonItem(title: "Button 2", style: .plain, target: nil, action: nil)
-        button3 = UIBarButtonItem(title: "Button 3", style: .plain, target: nil, action: nil)
-        button4 = UIBarButtonItem(title: "Button 4", style: .plain, target: nil, action: nil)
-        let navigationItem = UINavigationItem()
-        navigationItem.leftBarButtonItems = [button1, button2]
-        navigationItem.rightBarButtonItems = [button3, button4]
-        navigationBar.setItems([navigationItem], animated: false)
+        homeButton = UIBarButtonItem(image:UIImage(systemName: "house"), style: .plain, target: nil, action: #selector(homeButtonTapped))
+        bathtubButton = UIBarButtonItem(image:UIImage(systemName: "bathtub"), style: .plain, target: nil, action: #selector(bathtubButtonTapped))
+        bookmarkButton = UIBarButtonItem(image:UIImage(systemName: "bookmark"), style: .plain, target: nil, action: #selector(bookmarkButtonTapped))
+        profileButton = UIBarButtonItem(image:UIImage(systemName: "person"), style: .plain, target: nil, action: #selector(profileButtonTapped))
         
+        // Bottom Bar
+        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        fixedSpace.width = 64
+                
+        let navigationItem = UINavigationItem()
+        
+        navigationItem.leftBarButtonItems = [homeButton, fixedSpace, bathtubButton, fixedSpace, profileButton, fixedSpace, bookmarkButton]
+            
+
+        navigationBar.setItems([navigationItem], animated: false)
+                
         initConstraints()
     }
+    
+    // Action methods for the bottom bar buttons
+    @objc func homeButtonTapped() {
+        // Open the "Home" screen
+        let homeViewController = HomeViewController()
+        let navigationController = UINavigationController(rootViewController: homeViewController)
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
+    }
+
+    @objc func bathtubButtonTapped() {
+        // Open the "Bathtub" screen
+        let bathtubViewController = BathtubViewController()
+        let navigationController = UINavigationController(rootViewController: bathtubViewController)
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
+    }
+
+    @objc func bookmarkButtonTapped() {
+        // Open the "Bookmark" screen
+        let bookmarkViewController = SavedViewController()
+        let navigationController = UINavigationController(rootViewController: bookmarkViewController)
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
+    }
+
+    @objc func profileButtonTapped() {
+        // Open the "Profile" screen
+        let profileViewController = ProfileViewController()
+        let navigationController = UINavigationController(rootViewController: profileViewController)
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    
     
     // Setting the constraints
     func initConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
+       
+            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 200),
-            imageView.widthAnchor.constraint(equalToConstant: 200),
+            imageView.heightAnchor.constraint(equalToConstant: 150),
+            imageView.widthAnchor.constraint(equalToConstant: 150),
             
             tableView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),

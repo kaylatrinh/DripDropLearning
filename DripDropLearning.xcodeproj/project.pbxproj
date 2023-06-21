@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD70682A42959200342938 /* TableViewActivityCell.swift */; };
+		04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD706C2A429FE800342938 /* TableViewSavedActivityCell.swift */; };
 		EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */; };
 		EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */; };
 		EF1A2B942A3D595D002C8CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2B932A3D595D002C8CCA /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BD70682A42959200342938 /* TableViewActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewActivityCell.swift; sourceTree = "<group>"; };
+		04BD706C2A429FE800342938 /* TableViewSavedActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSavedActivityCell.swift; sourceTree = "<group>"; };
 		EF1A2B8C2A3D595D002C8CCA /* DripDropLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DripDropLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 			children = (
 				EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */,
 				EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */,
+				04BD70682A42959200342938 /* TableViewActivityCell.swift */,
 				EF1A2C0F2A4132C6002C8CCA /* Filter Screen */,
 			);
 			path = "Home Screen";
@@ -218,6 +223,7 @@
 			children = (
 				EF1A2C142A413312002C8CCA /* SavedView.swift */,
 				EF1A2C122A413306002C8CCA /* SavedViewController.swift */,
+				04BD706C2A429FE800342938 /* TableViewSavedActivityCell.swift */,
 			);
 			path = "Saved Screen";
 			sourceTree = "<group>";
@@ -363,6 +369,8 @@
 				EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */,
 				EF1A2C192A4133B2002C8CCA /* BathtubViewController.swift in Sources */,
 				EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */,
+				04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */,
+				04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */,
 				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
 				EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */,
 				EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */,
