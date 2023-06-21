@@ -9,16 +9,21 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    let registerView = RegisterView()
     override func loadView() {
-        view = RegisterView()
+        view = registerView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        registerView.buttonCreateAccount.addTarget(self, action: #selector(createAccountTapped), for: .touchUpInside)
     }
     
+    @objc func createAccountTapped(){
+        let homeScreen = HomeViewController()
+        navigationController?.pushViewController(homeScreen, animated: true)
+    }
 
     /*
     // MARK: - Navigation
