@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     let loginScreen = LoginView()
     
+    var user: User!
+    
     override func loadView() {
         view = loginScreen
     }
@@ -31,23 +33,27 @@ class ViewController: UIViewController {
                 alerUserLoginError()
                  return
         }
-        
+        print(email + password)
+        self.user = User(name: "nil", password: password, email: email, token: "nil")
         login()
-        let homeViewController = HomeViewController()
-        navigationController?.pushViewController(homeViewController, animated: true)
+        //let homeViewController = HomeViewController()
+        //navigationController?.pushViewController(homeViewController, animated: true)
               
     }
     
     func login() {
-        if let url = URL(string: APIConfigs.baseURL+"login"){
-            
-            AF.request(url, method: .post, parameters:
-                        [
-                            //MARK: we can unwrap them here since we made sure they are not null above...
-                            "email": self.user.email,
-                            "password": self.user.password
-                        ])
-            .responseData(completionHandler: { response in
+        if let url = URL(string: APIConfigs.baseURL + "login?email=" + self.user.email + "&password=" + self.user.password) {
+                let parameters: [String: Any] = [
+                    "email": self.user.email,
+                    "password": self.user.password
+                ]
+                
+                let headers: HTTPHeaders = [
+                    "Content-Type": "application/json"
+                ]
+                
+                AF.request(url, method: .post, encoding: JSONEncoding.default, headers: headers)
+                    .responseData(completionHandler: { response in
                 //MARK: retrieving the status code...
                 let status = response.response?.statusCode
                 
@@ -63,12 +69,12 @@ class ViewController: UIViewController {
                             let decoder = JSONDecoder()
                             do {
                                 let receivedData = try decoder
-                                    .decode(Register.self, from: data)
+                                    .decode(Login.self, from: data)
                                 self.user.token = receivedData.token
                                 
-                                let mainNotesScreen = MainViewController()
-                                mainNotesScreen.user = self.user
-                                self.navigationController?.pushViewController(mainNotesScreen, animated: true)
+                                let homeViewController = HomeViewController()
+                                homeViewController.user = self.user
+                                self.navigationController?.pushViewController(homeViewController, animated: true)
                                 print("IT WORKED!!!!!!!!!!!")
                             } catch {
                                 print("JSON COULDN'T BE DECODED")
@@ -80,7 +86,13 @@ class ViewController: UIViewController {
                             //MARK: the request was not valid 400-level...
                             print(data)
                             print("400 LEVEL ERROR")
-                            self.showIncorrectErrorAlert()
+                            if let statusCode = response.response?.statusCode {
+                                        print("Status Code: \(statusCode)")
+                                    }
+                                    
+                                    if let error = response.error {
+                                        print("Error: \(error)")
+                                    }
                             break
                             
                         default:

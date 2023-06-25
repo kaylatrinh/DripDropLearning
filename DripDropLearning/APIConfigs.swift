@@ -9,5 +9,5 @@ import Foundation
 
 class APIConfigs {
     //MARK: API base URL
-    static let baseURL = "evening-badlands-41621-0ad4abd83658.herokuapp.com/"
+    static let baseURL = "https://evening-badlands-41621-0ad4abd83658.herokuapp.com/"
 }

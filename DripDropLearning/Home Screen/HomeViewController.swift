@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     let homeScreen = HomeView()
+    
+    var user: User!
 
     override func loadView() {
         view = homeScreen

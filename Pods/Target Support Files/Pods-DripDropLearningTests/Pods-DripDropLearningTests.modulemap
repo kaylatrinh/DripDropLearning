@@ -1,0 +1,6 @@
+framework module Pods_DripDropLearningTests {
+  umbrella header "Pods-DripDropLearningTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
