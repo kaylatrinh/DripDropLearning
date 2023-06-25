@@ -14,6 +14,11 @@
 		0ADB38312A481C8300C64C5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38302A481C8300C64C5A /* User.swift */; };
 		0ADB38332A48226600C64C5A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38322A48226600C64C5A /* Register.swift */; };
 		0ADB38352A4825F800C64C5A /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38342A4825F800C64C5A /* UserDetails.swift */; };
+		0ADB38392A48359C00C64C5A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38382A48359C00C64C5A /* Post.swift */; };
+		0ADB383B2A484DEA00C64C5A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB383A2A484DEA00C64C5A /* Utils.swift */; };
+		0ADB38452A48777C00C64C5A /* BathtubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38442A48777C00C64C5A /* BathtubView.swift */; };
+		0ADB38472A48778700C64C5A /* BathtubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38462A48778700C64C5A /* BathtubViewController.swift */; };
+		0ADB38492A48779700C64C5A /* BathtubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38482A48779700C64C5A /* BathtubTableViewCell.swift */; };
 		37F7CE40827000F9976A30CF /* Pods_DripDropLearning_DripDropLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */; };
 		B54E8849B7560CFC47241FA0 /* Pods_DripDropLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */; };
 		DEDF44AB72F0537FCC3B0353 /* Pods_DripDropLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */; };
@@ -33,8 +38,6 @@
 		EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C0C2A412F8C002C8CCA /* ProfileViewController.swift */; };
 		EF1A2C132A413306002C8CCA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C122A413306002C8CCA /* SavedViewController.swift */; };
 		EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C142A413312002C8CCA /* SavedView.swift */; };
-		EF1A2C172A413331002C8CCA /* BathtubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C162A413331002C8CCA /* BathtubView.swift */; };
-		EF1A2C192A4133B2002C8CCA /* BathtubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C182A4133B2002C8CCA /* BathtubViewController.swift */; };
 		EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */; };
 		EF1A2C1D2A4133C9002C8CCA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */; };
 		EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */; };
@@ -66,6 +69,11 @@
 		0ADB38302A481C8300C64C5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0ADB38322A48226600C64C5A /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		0ADB38342A4825F800C64C5A /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		0ADB38382A48359C00C64C5A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0ADB383A2A484DEA00C64C5A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0ADB38442A48777C00C64C5A /* BathtubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubView.swift; sourceTree = "<group>"; };
+		0ADB38462A48778700C64C5A /* BathtubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubViewController.swift; sourceTree = "<group>"; };
+		0ADB38482A48779700C64C5A /* BathtubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubTableViewCell.swift; sourceTree = "<group>"; };
 		0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearningTests.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearningTests/Pods-DripDropLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,8 +102,6 @@
 		EF1A2C0C2A412F8C002C8CCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EF1A2C122A413306002C8CCA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		EF1A2C142A413312002C8CCA /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
-		EF1A2C162A413331002C8CCA /* BathtubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubView.swift; sourceTree = "<group>"; };
-		EF1A2C182A4133B2002C8CCA /* BathtubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubViewController.swift; sourceTree = "<group>"; };
 		EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
@@ -138,8 +144,19 @@
 				0ADB38302A481C8300C64C5A /* User.swift */,
 				0ADB38322A48226600C64C5A /* Register.swift */,
 				0ADB38342A4825F800C64C5A /* UserDetails.swift */,
+				0ADB38382A48359C00C64C5A /* Post.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		0ADB38432A48775E00C64C5A /* Bathtub Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB38442A48777C00C64C5A /* BathtubView.swift */,
+				0ADB38462A48778700C64C5A /* BathtubViewController.swift */,
+				0ADB38482A48779700C64C5A /* BathtubTableViewCell.swift */,
+			);
+			path = "Bathtub Screen";
 			sourceTree = "<group>";
 		};
 		54725D7495235220BF247602 /* Pods */ = {
@@ -191,12 +208,13 @@
 			isa = PBXGroup;
 			children = (
 				0ADB382E2A48185900C64C5A /* APIConfigs.swift */,
+				0ADB383A2A484DEA00C64C5A /* Utils.swift */,
 				0ADB382B2A48172F00C64C5A /* Data Models */,
 				EF1A2BC52A412C88002C8CCA /* Register Screen */,
 				EF1A2BC12A411EA7002C8CCA /* Login Screen */,
 				EF1A2C092A412F5E002C8CCA /* Profile Screen */,
 				EF1A2C112A4132E9002C8CCA /* Saved Screen */,
-				EF1A2C102A4132DE002C8CCA /* Bathtubs Screen */,
+				0ADB38432A48775E00C64C5A /* Bathtub Screen */,
 				EF1A2C0E2A4132B8002C8CCA /* Home Screen */,
 				EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */,
 				EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */,
@@ -270,15 +288,6 @@
 				EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */,
 			);
 			path = "Filter Screen";
-			sourceTree = "<group>";
-		};
-		EF1A2C102A4132DE002C8CCA /* Bathtubs Screen */ = {
-			isa = PBXGroup;
-			children = (
-				EF1A2C162A413331002C8CCA /* BathtubView.swift */,
-				EF1A2C182A4133B2002C8CCA /* BathtubViewController.swift */,
-			);
-			path = "Bathtubs Screen";
 			sourceTree = "<group>";
 		};
 		EF1A2C112A4132E9002C8CCA /* Saved Screen */ = {
@@ -534,19 +543,22 @@
 				EF1A2C1D2A4133C9002C8CCA /* HomeView.swift in Sources */,
 				EF1A2BC72A412D03002C8CCA /* RegisterView.swift in Sources */,
 				EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */,
+				0ADB383B2A484DEA00C64C5A /* Utils.swift in Sources */,
 				EF1A2C132A413306002C8CCA /* SavedViewController.swift in Sources */,
-				EF1A2C172A413331002C8CCA /* BathtubView.swift in Sources */,
 				EF1A2BC92A412D11002C8CCA /* RegisterViewController.swift in Sources */,
 				EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */,
-				EF1A2C192A4133B2002C8CCA /* BathtubViewController.swift in Sources */,
+				0ADB38392A48359C00C64C5A /* Post.swift in Sources */,
 				EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */,
 				04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */,
 				04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */,
 				0ADB38352A4825F800C64C5A /* UserDetails.swift in Sources */,
 				0ADB38332A48226600C64C5A /* Register.swift in Sources */,
+				0ADB38492A48779700C64C5A /* BathtubTableViewCell.swift in Sources */,
 				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
 				0ADB382D2A48175200C64C5A /* Login.swift in Sources */,
+				0ADB38472A48778700C64C5A /* BathtubViewController.swift in Sources */,
 				EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */,
+				0ADB38452A48777C00C64C5A /* BathtubView.swift in Sources */,
 				EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */,
 				EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */,
 				EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */,

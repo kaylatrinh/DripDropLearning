@@ -1,42 +1,43 @@
 //
-//  RegisterViewController.swift
+//  BathtubViewController.swift
 //  DripDropLearning
 //
-//  Created by Kayla Nguyen on 6/19/23.
+//  Created by Ariel Park on 6/25/23.
 //
 
 import UIKit
 import Alamofire
 
-class RegisterViewController: UIViewController {
+class BathtubViewController: UIViewController {
     
-    let registerView = RegisterView()
+    let bathtubScreen = BathtubView()
+    var user: User!
+    var posts = [Post]()
+    
     override func loadView() {
-        view = registerView
+        view = bathtubScreen
+        title = "Bathtubs"
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationItem.hidesBackButton = true
 
-        registerView.buttonCreateAccount.addTarget(self, action: #selector(createAccountTapped), for: .touchUpInside)
+        // Do any additional setup after loading the view.
+        bathtubScreen.tableView.dataSource = self
+        bathtubScreen.tableView.delegate = self
+        //bathtubScreen.tableView.reloadData()
+        
+        getAllPosts()
     }
     
-    @objc func createAccountTapped(){
-        guard let name = registerView.textfieldRegisterName.text, let email = registerView.textfieldRegisterEmail.text, let password = registerView.textfieldRegisterPass.text,
-              !name.isEmpty, !email.isEmpty, !password.isEmpty else {
-                //alerUserLoginError()
-                 return
-        }
-        register(name: name, email: email, password: password)
-    }
-
-    func register(name: String, email: String, password: String) {
-        if let url = URL(string: APIConfigs.baseURL + "register?name=" + name + "&email=" + email + "&password=" + password) {
+    func getAllPosts() {
+        if let url = URL(string: APIConfigs.baseURL + "posts") {
                 let headers: HTTPHeaders = [
                     "Content-Type": "application/json"
                 ]
                 
-                AF.request(url, method: .post, encoding: JSONEncoding.default, headers: headers)
+                AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
                     .responseData(completionHandler: { response in
                 //MARK: retrieving the status code...
                 let status = response.response?.statusCode
@@ -52,11 +53,10 @@ class RegisterViewController: UIViewController {
                             //MARK: the request was valid 200-level...
                             let decoder = JSONDecoder()
                             do {
-                                _ = try decoder
-                                    .decode(Register.self, from: data)
-                                
-                                let loginViewController = ViewController()
-                                self.navigationController?.pushViewController(loginViewController, animated: true)
+                                let receivedData = try decoder
+                                    .decode([Post].self, from: data)
+                                self.posts = receivedData
+                                self.bathtubScreen.tableView.reloadData()
                                 print("IT WORKED!!!!!!!!!!!")
                             } catch {
                                 print("JSON COULDN'T BE DECODED")
@@ -98,4 +98,31 @@ class RegisterViewController: UIViewController {
         }
     }
 
+}
+
+
+extension BathtubViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(posts.count)
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("NUMBER TWO")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bathtubs", for: indexPath) as! BathtubTableViewCell
+        cell.labelName.text = posts[indexPath.row].name
+        cell.labelDescription.text = posts[indexPath.row].post_name
+        if let image = Utils.imageFromBase64(posts[indexPath.row].image_data) {
+            cell.imageReceipt.image = image
+        }
+        return cell
+    }
+    
+    // MARK: when tapping on a table cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let detailScreen = NotesDetailsViewController()
+//        detailScreen.note = self.notesStruct.notes[indexPath.row]
+//        detailScreen.user = self.user
+//        navigationController?.pushViewController(detailScreen, animated: true)
+    }
 }

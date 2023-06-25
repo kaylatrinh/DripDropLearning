@@ -1,20 +1,18 @@
 //
-//  TableViewActivityCell.swift
+//  BathtubTableViewCell.swift
 //  DripDropLearning
 //
-//  Created by samy fallah on 6/20/23.
+//  Created by Ariel Park on 6/25/23.
 //
 
- 
 import UIKit
 
-class TableViewActivityCell: UITableViewCell {
+class BathtubTableViewCell: UITableViewCell {
     
     //Declaring variables
     var wrapperCellView: UIView!
     var labelName: UILabel!
     var labelDescription: UILabel!
-    var labelTime: UILabel!
     var imageReceipt: UIImageView!
         
     //Overriding function
@@ -23,8 +21,7 @@ class TableViewActivityCell: UITableViewCell {
         //Calling setUp functions
         setupWrapperCellView()
         setupLabelName()
-        setupLabelEmail()
-        setupLabelPhone()
+        setupLabelDescription()
         setupImageReceipt()
         initConstraints()
         
@@ -53,18 +50,13 @@ class TableViewActivityCell: UITableViewCell {
         labelName.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelName)
     }
-    func setupLabelEmail(){
+    func setupLabelDescription(){
         labelDescription = UILabel()
         labelDescription.font = .systemFont(ofSize: 16)
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelDescription)
     }
-    func setupLabelPhone(){
-        labelTime = UILabel()
-        labelDescription.font = .systemFont(ofSize: 16)
-        labelTime.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelTime)
-    }
+    
     func setupImageReceipt(){
         imageReceipt = UIImageView()
         imageReceipt.image = UIImage(systemName: "photo")
@@ -82,7 +74,7 @@ class TableViewActivityCell: UITableViewCell {
             wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
                         
-            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 2),
+            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
             labelName.leadingAnchor.constraint(equalTo: imageReceipt.trailingAnchor, constant: 8),
             labelName.heightAnchor.constraint(equalToConstant: 32),
             labelName.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
@@ -91,23 +83,16 @@ class TableViewActivityCell: UITableViewCell {
             labelDescription.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
             labelDescription.heightAnchor.constraint(equalToConstant: 32),
             labelDescription.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
-                
-            labelTime.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 2),
-            labelTime.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
-            labelTime.heightAnchor.constraint(equalToConstant: 32),
-            labelTime.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
                     
             imageReceipt.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
             imageReceipt.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -20),
-            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -20),
+            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -5),
+            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -5),
                 
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 104)
+            wrapperCellView.heightAnchor.constraint(equalToConstant: 70)
         ])
     }
-    
-    
-    //MARK: UNUSED CODE
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -124,4 +109,3 @@ class TableViewActivityCell: UITableViewCell {
     }
 
 }
-

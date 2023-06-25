@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
         homeScreen.tableView.reloadData()
         
         // Buttons
-        homeScreen.homeButton = UIBarButtonItem(image:UIImage(systemName: "house"), style: .plain, target: nil, action: #selector(homeButtonTapped))
+        homeScreen.homeButton = UIBarButtonItem(image:UIImage(systemName: "house"), style: .plain, target: nil, action: nil)
         homeScreen.bathtubButton = UIBarButtonItem(image:UIImage(systemName: "bathtub"), style: .plain, target: nil, action: #selector(bathtubButtonTapped))
         homeScreen.bookmarkButton = UIBarButtonItem(image:UIImage(systemName: "bookmark"), style: .plain, target: nil, action: #selector(bookmarkButtonTapped))
         homeScreen.profileButton = UIBarButtonItem(image:UIImage(systemName: "person"), style: .plain, target: nil, action: #selector(profileButtonTapped))
@@ -52,48 +52,25 @@ class HomeViewController: UIViewController {
     }
     
     // Action methods for the bottom bar buttons
-    @objc func homeButtonTapped() {
-        // Open the "Home" screen
-        let homeViewController = HomeViewController()
-        let navigationController = UINavigationController(rootViewController: homeViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
-    }
-
     @objc func bathtubButtonTapped() {
         // Open the "Bathtub" screen
         let bathtubViewController = BathtubViewController()
-        let navigationController = UINavigationController(rootViewController: bathtubViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
+        bathtubViewController.user = self.user
+        navigationController?.pushViewController(bathtubViewController, animated: true)
     }
 
     @objc func bookmarkButtonTapped() {
         // Open the "Bookmark" screen
         let bookmarkViewController = SavedViewController()
-        let navigationController = UINavigationController(rootViewController: bookmarkViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
+        bookmarkViewController.user = self.user
+        navigationController?.pushViewController(bookmarkViewController, animated: true)
     }
 
     @objc func profileButtonTapped() {
-//        // Open the "Profile" screen
-//        let profileViewController = ProfileViewController()
-//        let navigationController = UINavigationController(rootViewController: profileViewController)
-//        if let window = UIApplication.shared.windows.first {
-//            window.rootViewController = navigationController
-//            window.makeKeyAndVisible()
-//        }
-        
         // get user details
-        getUserDetails()
-        print(self.user.token)
+        let profileViewController = ProfileViewController()
+        profileViewController.user = self.user
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     func getUserDetails() {
@@ -126,11 +103,6 @@ class HomeViewController: UIViewController {
                                 
                                 let profileViewController = ProfileViewController()
                                 profileViewController.user = self.user
-//                                let navigationController = UINavigationController(rootViewController: profileViewController)
-//                                if let window = UIApplication.shared.windows.first {
-//                                    window.rootViewController = navigationController
-//                                    window.makeKeyAndVisible()
-//                                }
                                 self.navigationController?.pushViewController(profileViewController, animated: true)
                                 print("IT WORKED!!!!!!!!!!!")
                             } catch {
