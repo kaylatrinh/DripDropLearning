@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD70682A42959200342938 /* TableViewActivityCell.swift */; };
 		04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD706C2A429FE800342938 /* TableViewSavedActivityCell.swift */; };
+		0ADB382D2A48175200C64C5A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB382C2A48175200C64C5A /* Login.swift */; };
+		0ADB382F2A48185900C64C5A /* APIConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB382E2A48185900C64C5A /* APIConfigs.swift */; };
+		37F7CE40827000F9976A30CF /* Pods_DripDropLearning_DripDropLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */; };
+		B54E8849B7560CFC47241FA0 /* Pods_DripDropLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */; };
+		DEDF44AB72F0537FCC3B0353 /* Pods_DripDropLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */; };
 		EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */; };
 		EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */; };
 		EF1A2B942A3D595D002C8CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2B932A3D595D002C8CCA /* ViewController.swift */; };
@@ -53,6 +58,16 @@
 /* Begin PBXFileReference section */
 		04BD70682A42959200342938 /* TableViewActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewActivityCell.swift; sourceTree = "<group>"; };
 		04BD706C2A429FE800342938 /* TableViewSavedActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSavedActivityCell.swift; sourceTree = "<group>"; };
+		0ADB382C2A48175200C64C5A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0ADB382E2A48185900C64C5A /* APIConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigs.swift; sourceTree = "<group>"; };
+		0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearningTests.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearningTests/Pods-DripDropLearningTests.release.xcconfig"; sourceTree = "<group>"; };
+		438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearning_DripDropLearningUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearningTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E9E344203A1D1CC76D0612 /* Pods-DripDropLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearningTests.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearningTests/Pods-DripDropLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
+		62F26C157EA78F7899C520F0 /* Pods-DripDropLearning-DripDropLearningUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning-DripDropLearningUITests.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests.release.xcconfig"; sourceTree = "<group>"; };
+		992582098391EF280FC68865 /* Pods-DripDropLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearning/Pods-DripDropLearning.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1A2B8C2A3D595D002C8CCA /* DripDropLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DripDropLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +94,7 @@
 		EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		F28B9FD1D14AE8893A51CB14 /* Pods-DripDropLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearning/Pods-DripDropLearning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54E8849B7560CFC47241FA0 /* Pods_DripDropLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDF44AB72F0537FCC3B0353 /* Pods_DripDropLearningTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +118,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F7CE40827000F9976A30CF /* Pods_DripDropLearning_DripDropLearningUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADB382B2A48172F00C64C5A /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB382C2A48175200C64C5A /* Login.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		54725D7495235220BF247602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				992582098391EF280FC68865 /* Pods-DripDropLearning.debug.xcconfig */,
+				F28B9FD1D14AE8893A51CB14 /* Pods-DripDropLearning.release.xcconfig */,
+				2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */,
+				62F26C157EA78F7899C520F0 /* Pods-DripDropLearning-DripDropLearningUITests.release.xcconfig */,
+				60E9E344203A1D1CC76D0612 /* Pods-DripDropLearningTests.debug.xcconfig */,
+				38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0B5530F2634EC1618F0BF4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */,
+				438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */,
+				491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF1A2B832A3D595D002C8CCA = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +164,8 @@
 				EF1A2BA52A3D595F002C8CCA /* DripDropLearningTests */,
 				EF1A2BAF2A3D595F002C8CCA /* DripDropLearningUITests */,
 				EF1A2B8D2A3D595D002C8CCA /* Products */,
+				54725D7495235220BF247602 /* Pods */,
+				B0B5530F2634EC1618F0BF4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +182,8 @@
 		EF1A2B8E2A3D595D002C8CCA /* DripDropLearning */ = {
 			isa = PBXGroup;
 			children = (
+				0ADB382E2A48185900C64C5A /* APIConfigs.swift */,
+				0ADB382B2A48172F00C64C5A /* Data Models */,
 				EF1A2BC52A412C88002C8CCA /* Register Screen */,
 				EF1A2BC12A411EA7002C8CCA /* Login Screen */,
 				EF1A2C092A412F5E002C8CCA /* Profile Screen */,
@@ -235,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF1A2BB62A3D595F002C8CCA /* Build configuration list for PBXNativeTarget "DripDropLearning" */;
 			buildPhases = (
+				F3F7A61723C177E3663ED4E1 /* [CP] Check Pods Manifest.lock */,
 				EF1A2B882A3D595D002C8CCA /* Sources */,
 				EF1A2B892A3D595D002C8CCA /* Frameworks */,
 				EF1A2B8A2A3D595D002C8CCA /* Resources */,
+				7681798C7291652A391E0639 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF1A2BB92A3D595F002C8CCA /* Build configuration list for PBXNativeTarget "DripDropLearningTests" */;
 			buildPhases = (
+				9F06EFBA7B15CE55D9003D64 /* [CP] Check Pods Manifest.lock */,
 				EF1A2B9E2A3D595F002C8CCA /* Sources */,
 				EF1A2B9F2A3D595F002C8CCA /* Frameworks */,
 				EF1A2BA02A3D595F002C8CCA /* Resources */,
@@ -270,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF1A2BBC2A3D595F002C8CCA /* Build configuration list for PBXNativeTarget "DripDropLearningUITests" */;
 			buildPhases = (
+				8A6F0F4405FFEC1E4DE26704 /* [CP] Check Pods Manifest.lock */,
 				EF1A2BA82A3D595F002C8CCA /* Sources */,
 				EF1A2BA92A3D595F002C8CCA /* Frameworks */,
 				EF1A2BAA2A3D595F002C8CCA /* Resources */,
+				EA682013F0F6B31A895B63A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,6 +414,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7681798C7291652A391E0639 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DripDropLearning/Pods-DripDropLearning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DripDropLearning/Pods-DripDropLearning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DripDropLearning/Pods-DripDropLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A6F0F4405FFEC1E4DE26704 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DripDropLearning-DripDropLearningUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F06EFBA7B15CE55D9003D64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DripDropLearningTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA682013F0F6B31A895B63A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F7A61723C177E3663ED4E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DripDropLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF1A2B882A3D595D002C8CCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -372,10 +535,12 @@
 				04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */,
 				04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */,
 				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
+				0ADB382D2A48175200C64C5A /* Login.swift in Sources */,
 				EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */,
 				EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */,
 				EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */,
 				EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */,
+				0ADB382F2A48185900C64C5A /* APIConfigs.swift in Sources */,
 				EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +713,7 @@
 		};
 		EF1A2BB72A3D595F002C8CCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992582098391EF280FC68865 /* Pods-DripDropLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,6 +742,7 @@
 		};
 		EF1A2BB82A3D595F002C8CCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28B9FD1D14AE8893A51CB14 /* Pods-DripDropLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -604,6 +771,7 @@
 		};
 		EF1A2BBA2A3D595F002C8CCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60E9E344203A1D1CC76D0612 /* Pods-DripDropLearningTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +792,7 @@
 		};
 		EF1A2BBB2A3D595F002C8CCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -644,6 +813,7 @@
 		};
 		EF1A2BBD2A3D595F002C8CCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -662,6 +832,7 @@
 		};
 		EF1A2BBE2A3D595F002C8CCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F26C157EA78F7899C520F0 /* Pods-DripDropLearning-DripDropLearningUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
