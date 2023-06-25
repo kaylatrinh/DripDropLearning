@@ -9,26 +9,34 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    let profileScreen = ProfileView()
+    let notificationCenter = NotificationCenter.default
+    var user: User!
+    
     override func loadView() {
-        view = ProfileView()
+        view = profileScreen
         title = "Profile"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        fillInDetails()
+        
+        profileScreen.buttonLogOut.addTarget(self, action: #selector(onButtonLogoutTapped), for: .touchUpInside)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fillInDetails() {
+        profileScreen.labelName.text! += self.user.name
+        profileScreen.labelEmail.text! += self.user.email
     }
-    */
-
+    
+    @objc func onButtonLogoutTapped() {
+        let eraseUser = User(name: "nil", password: "nil", email: "nil", token: "nil")
+        self.notificationCenter.post(
+            name: Notification.Name("Logout"),
+            object: eraseUser)
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

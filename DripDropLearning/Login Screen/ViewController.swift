@@ -11,7 +11,7 @@ import Alamofire
 class ViewController: UIViewController {
     
     let loginScreen = LoginView()
-    
+    let notificationCenter = NotificationCenter.default
     var user: User!
     
     override func loadView() {
@@ -24,6 +24,20 @@ class ViewController: UIViewController {
         
         loginScreen.buttonSignIn.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         loginScreen.buttonRegister.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        
+        // when logout is tapped
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(notificationReceivedLogout(notification:)),
+            name: Notification.Name("Logout"),
+            object: nil)
+    }
+    
+    // when logout is tapped
+    @objc func notificationReceivedLogout(notification: Notification) {
+        loginScreen.textfieldPass.text = ""
+        loginScreen.textfieldEmail.text = ""
+        self.user = notification.object as? User
     }
     
     //Action listeners for Buttons
@@ -43,11 +57,6 @@ class ViewController: UIViewController {
     
     func login() {
         if let url = URL(string: APIConfigs.baseURL + "login?email=" + self.user.email + "&password=" + self.user.password) {
-                let parameters: [String: Any] = [
-                    "email": self.user.email,
-                    "password": self.user.password
-                ]
-                
                 let headers: HTTPHeaders = [
                     "Content-Type": "application/json"
                 ]

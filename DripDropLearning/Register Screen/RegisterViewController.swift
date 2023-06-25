@@ -34,12 +34,6 @@ class RegisterViewController: UIViewController {
 
     func register(name: String, email: String, password: String) {
         if let url = URL(string: APIConfigs.baseURL + "register?name=" + name + "&email=" + email + "&password=" + password) {
-                let parameters: [String: Any] = [
-                    "name": name,
-                    "email": email,
-                    "password": password
-                ]
-                
                 let headers: HTTPHeaders = [
                     "Content-Type": "application/json"
                 ]

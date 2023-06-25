@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileView: UIView {
     var labelName = UILabel()
-    var labelID = UILabel()
+    //var labelID = UILabel()
     var labelEmail = UILabel()
     var buttonLogOut = UIButton()
     var navigationBar: UINavigationBar!
@@ -24,7 +24,7 @@ class ProfileView: UIView {
         backgroundColor = .white
         
         setupLabelName()
-        setupLabelID()
+        //setupLabelID()
         setupLabelEmail()
         setupButtonLogOut()
         
@@ -64,20 +64,20 @@ class ProfileView: UIView {
         self.addSubview(labelName)
     }
     
-    func setupLabelID(){
-        labelID = UILabel()
-        labelID.font = UIFont.systemFont(ofSize: 18)
-        labelID.text = "ID: "
-        labelID.textColor = .black
-        labelID.textAlignment = .center
-        labelID.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelID)
-    }
+//    func setupLabelID(){
+//        labelID = UILabel()
+//        labelID.font = UIFont.systemFont(ofSize: 18)
+//        labelID.text = "ID: "
+//        labelID.textColor = .black
+//        labelID.textAlignment = .center
+//        labelID.translatesAutoresizingMaskIntoConstraints = false
+//        self.addSubview(labelID)
+//    }
     
     func setupLabelEmail(){
         labelEmail = UILabel()
         labelEmail.font = UIFont.systemFont(ofSize: 18)
-        labelEmail.text = "Email:"
+        labelEmail.text = "Email: "
         labelEmail.textColor = .black
         labelEmail.textAlignment = .center
         labelEmail.translatesAutoresizingMaskIntoConstraints = false
@@ -141,10 +141,10 @@ class ProfileView: UIView {
         labelName.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
 
         
-        labelID.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 32),
-        labelID.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+//        labelID.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 32),
+//        labelID.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
         
-        labelEmail.topAnchor.constraint(equalTo: labelID.bottomAnchor, constant: 32),
+        labelEmail.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 32),
         labelEmail.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
         
         buttonLogOut.bottomAnchor.constraint(equalTo: self.labelEmail.bottomAnchor, constant: 64),

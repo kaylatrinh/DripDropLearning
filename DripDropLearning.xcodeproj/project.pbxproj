@@ -13,6 +13,7 @@
 		0ADB382F2A48185900C64C5A /* APIConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB382E2A48185900C64C5A /* APIConfigs.swift */; };
 		0ADB38312A481C8300C64C5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38302A481C8300C64C5A /* User.swift */; };
 		0ADB38332A48226600C64C5A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38322A48226600C64C5A /* Register.swift */; };
+		0ADB38352A4825F800C64C5A /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38342A4825F800C64C5A /* UserDetails.swift */; };
 		37F7CE40827000F9976A30CF /* Pods_DripDropLearning_DripDropLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */; };
 		B54E8849B7560CFC47241FA0 /* Pods_DripDropLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */; };
 		DEDF44AB72F0537FCC3B0353 /* Pods_DripDropLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */; };
@@ -64,6 +65,7 @@
 		0ADB382E2A48185900C64C5A /* APIConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigs.swift; sourceTree = "<group>"; };
 		0ADB38302A481C8300C64C5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0ADB38322A48226600C64C5A /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		0ADB38342A4825F800C64C5A /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearningTests.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearningTests/Pods-DripDropLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				0ADB382C2A48175200C64C5A /* Login.swift */,
 				0ADB38302A481C8300C64C5A /* User.swift */,
 				0ADB38322A48226600C64C5A /* Register.swift */,
+				0ADB38342A4825F800C64C5A /* UserDetails.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */,
 				04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */,
 				04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */,
+				0ADB38352A4825F800C64C5A /* UserDetails.swift in Sources */,
 				0ADB38332A48226600C64C5A /* Register.swift in Sources */,
 				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
 				0ADB382D2A48175200C64C5A /* Login.swift in Sources */,

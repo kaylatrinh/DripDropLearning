@@ -44,66 +44,66 @@ class HomeView: UIView {
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
         addSubview(navigationBar)
         
-        // Buttons
-        homeButton = UIBarButtonItem(image:UIImage(systemName: "house"), style: .plain, target: nil, action: #selector(homeButtonTapped))
-        bathtubButton = UIBarButtonItem(image:UIImage(systemName: "bathtub"), style: .plain, target: nil, action: #selector(bathtubButtonTapped))
-        bookmarkButton = UIBarButtonItem(image:UIImage(systemName: "bookmark"), style: .plain, target: nil, action: #selector(bookmarkButtonTapped))
-        profileButton = UIBarButtonItem(image:UIImage(systemName: "person"), style: .plain, target: nil, action: #selector(profileButtonTapped))
+//        // Buttons
+//        homeButton = UIBarButtonItem(image:UIImage(systemName: "house"), style: .plain, target: nil, action: #selector(homeButtonTapped))
+//        bathtubButton = UIBarButtonItem(image:UIImage(systemName: "bathtub"), style: .plain)
+//        bookmarkButton = UIBarButtonItem(image:UIImage(systemName: "bookmark"), style: .plain, target: nil, action: #selector(bookmarkButtonTapped))
+//        profileButton = UIBarButtonItem(image:UIImage(systemName: "person"), style: .plain, target: nil, action: #selector(profileButtonTapped))
         
-        // Bottom Bar
-        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        fixedSpace.width = 64
-                
-        let navigationItem = UINavigationItem()
-        
-        navigationItem.leftBarButtonItems = [homeButton, fixedSpace, bathtubButton, fixedSpace, profileButton, fixedSpace, bookmarkButton]
-            
-
-        navigationBar.setItems([navigationItem], animated: false)
+//        // Bottom Bar
+//        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+//        fixedSpace.width = 64
+//                
+//        let navigationItem = UINavigationItem()
+//        
+//        navigationItem.leftBarButtonItems = [homeButton, fixedSpace, bathtubButton, fixedSpace, profileButton, fixedSpace, bookmarkButton]
+//            
+//
+//        navigationBar.setItems([navigationItem], animated: false)
                 
         initConstraints()
     }
     
-    // Action methods for the bottom bar buttons
-    @objc func homeButtonTapped() {
-        // Open the "Home" screen
-        let homeViewController = HomeViewController()
-        let navigationController = UINavigationController(rootViewController: homeViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
-    }
-
-    @objc func bathtubButtonTapped() {
-        // Open the "Bathtub" screen
-        let bathtubViewController = BathtubViewController()
-        let navigationController = UINavigationController(rootViewController: bathtubViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
-    }
-
-    @objc func bookmarkButtonTapped() {
-        // Open the "Bookmark" screen
-        let bookmarkViewController = SavedViewController()
-        let navigationController = UINavigationController(rootViewController: bookmarkViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
-    }
-
-    @objc func profileButtonTapped() {
-        // Open the "Profile" screen
-        let profileViewController = ProfileViewController()
-        let navigationController = UINavigationController(rootViewController: profileViewController)
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
-    }
+//    // Action methods for the bottom bar buttons
+//    @objc func homeButtonTapped() {
+//        // Open the "Home" screen
+//        let homeViewController = HomeViewController()
+//        let navigationController = UINavigationController(rootViewController: homeViewController)
+//        if let window = UIApplication.shared.windows.first {
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+//    }
+//
+//    @objc func bathtubButtonTapped() {
+//        // Open the "Bathtub" screen
+//        let bathtubViewController = BathtubViewController()
+//        let navigationController = UINavigationController(rootViewController: bathtubViewController)
+//        if let window = UIApplication.shared.windows.first {
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+//    }
+//
+//    @objc func bookmarkButtonTapped() {
+//        // Open the "Bookmark" screen
+//        let bookmarkViewController = SavedViewController()
+//        let navigationController = UINavigationController(rootViewController: bookmarkViewController)
+//        if let window = UIApplication.shared.windows.first {
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+//    }
+//
+//    @objc func profileButtonTapped() {
+//        // Open the "Profile" screen
+//        let profileViewController = ProfileViewController()
+//        let navigationController = UINavigationController(rootViewController: profileViewController)
+//        if let window = UIApplication.shared.windows.first {
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+//    }
     
     
     
