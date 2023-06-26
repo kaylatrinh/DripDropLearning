@@ -16,11 +16,14 @@ class HomeViewController: UIViewController {
 
     override func loadView() {
         view = homeScreen
-        title = "Home"
+        title = "Drip Drop Learning"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        homeScreen.tableView.backgroundColor = UIColor(named: "Background")
 
         // Add navigation bar items
         let leftItem = UIBarButtonItem(image: UIImage(systemName: "camera"), style: .plain, target: self, action: #selector(cameraButtonTapped))

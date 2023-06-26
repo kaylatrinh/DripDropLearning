@@ -15,7 +15,7 @@ class RegisterView: UIView {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = UIColor(named: "Background")
         
         setupTextFieldRegisterName()
         setupTextFieldRegisterEmail()

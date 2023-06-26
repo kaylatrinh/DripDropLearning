@@ -21,7 +21,7 @@ class ProfileView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = UIColor(named: "Background")
         
         setupLabelName()
         //setupLabelID()

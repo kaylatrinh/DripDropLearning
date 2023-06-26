@@ -18,11 +18,14 @@ class BathtubView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = UIColor(named: "Background")
         
         // Table View
         tableView = UITableView()
         tableView.register(BathtubTableViewCell.self, forCellReuseIdentifier: "bathtubs")
+        tableView.backgroundView = nil
+        tableView.backgroundColor = UIColor(named: "Background")
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
         

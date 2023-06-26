@@ -19,18 +19,22 @@ class HomeView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = UIColor(named: "Background")
         
         // Image View
         imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = UIColor(named: "Yellow Accent")
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "star") // Set the system symbol image
+        imageView.image = UIImage(systemName: "drop.fill") // Set the system symbol image
         addSubview(imageView)
 
         
         // Table View
         tableView = UITableView()
+        tableView.backgroundView = nil
+        tableView.backgroundColor = UIColor(named: "Background")
+        tableView.separatorStyle = .none
         tableView.register(TableViewActivityCell.self, forCellReuseIdentifier: "activity")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)

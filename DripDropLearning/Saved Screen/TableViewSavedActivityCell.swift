@@ -35,7 +35,7 @@ class TableViewSavedActivityCell: UITableViewCell {
         wrapperCellView = UITableViewCell()
             
             //working with the shadows and colors...
-            wrapperCellView.backgroundColor = .white
+            wrapperCellView.backgroundColor = UIColor(named: "Background")
             wrapperCellView.layer.cornerRadius = 10.0
             wrapperCellView.layer.shadowColor = UIColor.gray.cgColor
             wrapperCellView.layer.shadowOffset = .zero
