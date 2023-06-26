@@ -27,7 +27,7 @@ class HomeView: UIView {
         imageView.tintColor = UIColor(named: "Yellow Accent")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "drop.fill") // Set the system symbol image
-        addSubview(imageView)
+        self.addSubview(imageView)
 
         
         // Table View
@@ -37,14 +37,14 @@ class HomeView: UIView {
         tableView.separatorStyle = .none
         tableView.register(TableViewActivityCell.self, forCellReuseIdentifier: "activity")
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(tableView)
+        self.addSubview(tableView)
         
         
         
         // Navigation Bar
         navigationBar = UINavigationBar()
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(navigationBar)
+        self.addSubview(navigationBar)
                 
         initConstraints()
     }

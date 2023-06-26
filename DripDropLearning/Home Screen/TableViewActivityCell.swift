@@ -23,8 +23,8 @@ class TableViewActivityCell: UITableViewCell {
         //Calling setUp functions
         setupWrapperCellView()
         setupLabelName()
-        setupLabelEmail()
-        setupLabelPhone()
+        setupLabelDescription()
+        setupLabelTime()
         setupImageReceipt()
         initConstraints()
         
@@ -34,34 +34,37 @@ class TableViewActivityCell: UITableViewCell {
     func setupWrapperCellView(){
         wrapperCellView = UITableViewCell()
             
-            //working with the shadows and colors...
-            wrapperCellView.backgroundColor = UIColor(named: "Background")
-            wrapperCellView.layer.cornerRadius = 10.0
-            wrapperCellView.layer.shadowColor = UIColor.gray.cgColor
-            wrapperCellView.layer.shadowOffset = .zero
-            wrapperCellView.layer.shadowRadius = 6.0
-            wrapperCellView.layer.shadowOpacity = 0.7
-            
-            
-            wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
-            self.addSubview(wrapperCellView)
+        //working with the shadows and colors...
+        wrapperCellView.backgroundColor = UIColor(named: "Background")
+        wrapperCellView.layer.cornerRadius = 4.0
+        wrapperCellView.layer.shadowColor = UIColor.gray.cgColor
+        wrapperCellView.layer.shadowOffset = .zero
+        wrapperCellView.layer.shadowRadius = 6.0
+        wrapperCellView.layer.shadowOpacity = 0.7
+        
+        
+        wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(wrapperCellView)
     }
         
     func setupLabelName(){
         labelName = UILabel()
         labelName.font = .boldSystemFont(ofSize: 16)
+        labelName.textColor = .white
         labelName.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelName)
     }
-    func setupLabelEmail(){
+    func setupLabelDescription(){
         labelDescription = UILabel()
         labelDescription.font = .systemFont(ofSize: 16)
+        labelDescription.textColor = .white
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelDescription)
     }
-    func setupLabelPhone(){
+    func setupLabelTime(){
         labelTime = UILabel()
-        labelDescription.font = .systemFont(ofSize: 16)
+        labelTime.font = .systemFont(ofSize: 16)
+        labelTime.textColor = .white
         labelTime.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelTime)
     }
@@ -77,32 +80,29 @@ class TableViewActivityCell: UITableViewCell {
     
     func initConstraints(){
         NSLayoutConstraint.activate([
-            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
+            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 4),
             wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
+            
+            imageReceipt.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+            imageReceipt.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
+            imageReceipt.heightAnchor.constraint(equalToConstant: 300),
+            imageReceipt.widthAnchor.constraint(equalToConstant: 300),
                         
-            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 2),
-            labelName.leadingAnchor.constraint(equalTo: imageReceipt.trailingAnchor, constant: 8),
-            labelName.heightAnchor.constraint(equalToConstant: 32),
-            labelName.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
+            labelName.topAnchor.constraint(equalTo: imageReceipt.bottomAnchor, constant: 8),
+            labelName.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
                         
-            labelDescription.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 2),
-            labelDescription.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
-            labelDescription.heightAnchor.constraint(equalToConstant: 32),
-            labelDescription.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
+            labelDescription.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 4),
+            labelDescription.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+            labelDescription.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 10),
+            labelDescription.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -10),
+            
+            labelTime.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 4),
+            labelTime.centerXAnchor.constraint(equalTo: labelName.centerXAnchor),
                 
-            labelTime.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 2),
-            labelTime.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
-            labelTime.heightAnchor.constraint(equalToConstant: 32),
-            labelTime.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
-                    
-            imageReceipt.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
-            imageReceipt.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -20),
-            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -20),
                 
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 104)
+            wrapperCellView.heightAnchor.constraint(equalToConstant: 800)
         ])
     }
     
