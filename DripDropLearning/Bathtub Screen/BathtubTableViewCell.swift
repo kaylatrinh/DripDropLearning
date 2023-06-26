@@ -32,7 +32,7 @@ class BathtubTableViewCell: UITableViewCell {
         wrapperCellView = UITableViewCell()
             
             //working with the shadows and colors...
-            wrapperCellView.backgroundColor = .white
+            wrapperCellView.backgroundColor = UIColor(named: "Background")
             wrapperCellView.layer.cornerRadius = 10.0
             wrapperCellView.layer.shadowColor = UIColor.gray.cgColor
             wrapperCellView.layer.shadowOffset = .zero
@@ -47,12 +47,14 @@ class BathtubTableViewCell: UITableViewCell {
     func setupLabelName(){
         labelName = UILabel()
         labelName.font = .boldSystemFont(ofSize: 16)
+        labelName.textColor = .white
         labelName.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelName)
     }
     func setupLabelDescription(){
         labelDescription = UILabel()
         labelDescription.font = .systemFont(ofSize: 16)
+        labelDescription.textColor = .white
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelDescription)
     }

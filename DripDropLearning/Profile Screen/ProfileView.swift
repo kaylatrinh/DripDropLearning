@@ -41,7 +41,7 @@ class ProfileView: UIView {
         labelName = UILabel()
         labelName.font = UIFont.boldSystemFont(ofSize: 24)
         labelName.text = "Name: "
-        labelName.textColor = .black
+        labelName.textColor = .white
         labelName.textAlignment = .center
         labelName.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(labelName)
@@ -61,7 +61,7 @@ class ProfileView: UIView {
         labelEmail = UILabel()
         labelEmail.font = UIFont.systemFont(ofSize: 18)
         labelEmail.text = "Email: "
-        labelEmail.textColor = .black
+        labelEmail.textColor = .white
         labelEmail.textAlignment = .center
         labelEmail.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(labelEmail)

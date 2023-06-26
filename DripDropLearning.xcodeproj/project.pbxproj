@@ -46,8 +46,6 @@
 		EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C142A413312002C8CCA /* SavedView.swift */; };
 		EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */; };
 		EF1A2C1D2A4133C9002C8CCA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */; };
-		EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */; };
-		EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +114,6 @@
 		EF1A2C142A413312002C8CCA /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F28B9FD1D14AE8893A51CB14 /* Pods-DripDropLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearning/Pods-DripDropLearning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,18 +306,8 @@
 				EF1A2C1A2A4133BD002C8CCA /* HomeViewController.swift */,
 				EF1A2C1C2A4133C9002C8CCA /* HomeView.swift */,
 				04BD70682A42959200342938 /* TableViewActivityCell.swift */,
-				EF1A2C0F2A4132C6002C8CCA /* Filter Screen */,
 			);
 			path = "Home Screen";
-			sourceTree = "<group>";
-		};
-		EF1A2C0F2A4132C6002C8CCA /* Filter Screen */ = {
-			isa = PBXGroup;
-			children = (
-				EF1A2C1E2A4133D5002C8CCA /* FilterView.swift */,
-				EF1A2C202A4133E2002C8CCA /* FilterViewController.swift */,
-			);
-			path = "Filter Screen";
 			sourceTree = "<group>";
 		};
 		EF1A2C112A4132E9002C8CCA /* Saved Screen */ = {
@@ -591,7 +577,6 @@
 				0ADB38352A4825F800C64C5A /* UserDetails.swift in Sources */,
 				0ADB38332A48226600C64C5A /* Register.swift in Sources */,
 				0ADB38492A48779700C64C5A /* BathtubTableViewCell.swift in Sources */,
-				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
 				0ADB382D2A48175200C64C5A /* Login.swift in Sources */,
 				0ADB38472A48778700C64C5A /* BathtubViewController.swift in Sources */,
 				0ADB38512A4956AE00C64C5A /* CommentTableViewCell.swift in Sources */,
@@ -601,7 +586,6 @@
 				EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */,
 				0ADB38532A4961E800C64C5A /* Comment.swift in Sources */,
 				0ADB38562A49714000C64C5A /* AddPostView.swift in Sources */,
-				EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */,
 				0ADB382F2A48185900C64C5A /* APIConfigs.swift in Sources */,
 				EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */,
 				0ADB38312A481C8300C64C5A /* User.swift in Sources */,

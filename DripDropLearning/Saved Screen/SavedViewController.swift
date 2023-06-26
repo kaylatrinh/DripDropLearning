@@ -22,9 +22,7 @@ class SavedViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.hidesBackButton = true
-            
-        let rightItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(filterButtonTapped))
-        navigationItem.rightBarButtonItem = rightItem
+    
             
         savedScreen.tableView.dataSource = self
         savedScreen.tableView.delegate = self
@@ -139,11 +137,6 @@ class SavedViewController: UIViewController {
             //alert that the URL is invalid...
             print("URL invalid")
         }
-    }
-
-    
-    @objc func filterButtonTapped() {
-            
     }
     
 }

@@ -29,6 +29,7 @@ class BathtubViewController: UIViewController {
         bathtubScreen.tableView.delegate = self
         bathtubScreen.tableView.reloadData()
         
+        
         // Add navigation bar items
         let rightItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonTapped))
         navigationItem.rightBarButtonItem = rightItem

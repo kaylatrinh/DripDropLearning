@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         view = homeScreen
         title = "Drip Drop Learning"
+        self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
 
@@ -25,12 +26,7 @@ class HomeViewController: UIViewController {
         
         homeScreen.tableView.backgroundColor = UIColor(named: "Background")
 
-        // Add navigation bar items
-        let leftItem = UIBarButtonItem(image: UIImage(systemName: "camera"), style: .plain, target: self, action: #selector(cameraButtonTapped))
-        navigationItem.leftBarButtonItem = leftItem
             
-        let rightItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(filterButtonTapped))
-        navigationItem.rightBarButtonItem = rightItem
             
         homeScreen.tableView.dataSource = self
         homeScreen.tableView.delegate = self
@@ -147,14 +143,7 @@ class HomeViewController: UIViewController {
             print("URL invalid")
         }
     }
-    
-    @objc func cameraButtonTapped(){
-        presentPhotoActionSheet()
-    }
-    
-    @objc func filterButtonTapped() {
-            
-        }
+
     
 }
 
@@ -196,62 +185,3 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
 }
-
-extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func presentPhotoActionSheet() {
-        let actionSheet = UIAlertController(title: "Profile Picture",
-                                            message: "How would you like to select a picture?",
-                                            preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Cancel",
-                                            style: .cancel,
-                                            handler: nil))
-        actionSheet.addAction(UIAlertAction(title: "Take Photo",
-                                            style: .default,
-                                            handler: { [weak self] _ in
-            
-            self?.presentCamera()
-            
-        }))
-        actionSheet.addAction(UIAlertAction(title: "Choose Photo",
-                                            style: .default,
-                                            handler: { [weak self] _ in
-            
-            self?.presentPhotoPicker()
-            
-        }))
-        
-        present(actionSheet, animated: true)
-    }
-    
-    func presentCamera() {
-        let vc = UIImagePickerController()
-        vc.sourceType = .camera
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
-    }
-    
-    func presentPhotoPicker() {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
-            return
-        }
-        homeScreen.imageView.image = selectedImage
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
-
-
-
