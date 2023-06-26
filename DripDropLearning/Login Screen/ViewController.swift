@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Yellow Accent")
         
         loginScreen.buttonSignIn.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         loginScreen.buttonRegister.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)

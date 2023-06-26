@@ -59,6 +59,7 @@ class LoginView: UIView {
         buttonSignIn = UIButton(type: .system)
         buttonSignIn.titleLabel?.font = .boldSystemFont(ofSize: 16)
         buttonSignIn.setTitle("Log In", for: .normal)
+        buttonSignIn.titleLabel?.textColor = UIColor(named: "Yellow Accent")
         buttonSignIn.backgroundColor = .white
         buttonSignIn.layer.cornerRadius = 5
         buttonSignIn.layer.borderWidth = 1
@@ -71,7 +72,7 @@ class LoginView: UIView {
         buttonRegister = UIButton(type: .system)
         buttonRegister.titleLabel?.font = .systemFont(ofSize: 14)
         buttonRegister.setTitle("Register an Account", for: .normal)
-        buttonRegister.tintColor = .white
+        buttonRegister.tintColor = UIColor(named: "Yellow Accent")
         buttonRegister.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonRegister)
     }

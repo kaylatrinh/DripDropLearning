@@ -71,6 +71,7 @@ class ProfileView: UIView {
         buttonLogOut = UIButton(type: .system)
         buttonLogOut.titleLabel?.font = .boldSystemFont(ofSize: 16)
         buttonLogOut.setTitle("Log Out", for: .normal)
+        buttonLogOut.tintColor = UIColor(named: "Yellow Accent")
         buttonLogOut.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonLogOut)
     }

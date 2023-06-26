@@ -53,6 +53,7 @@ class RegisterView: UIView {
         buttonCreateAccount = UIButton(type: .system)
         buttonCreateAccount.titleLabel?.font = .boldSystemFont(ofSize: 16)
         buttonCreateAccount.setTitle("Create Account", for: .normal)
+        buttonCreateAccount.tintColor = UIColor(named: "Yellow Accent")
         buttonCreateAccount.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonCreateAccount)
     }

@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Yellow Accent")
         registerView.buttonCreateAccount.addTarget(self, action: #selector(createAccountTapped), for: .touchUpInside)
     }
     
