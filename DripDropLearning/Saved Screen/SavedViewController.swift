@@ -12,6 +12,7 @@ class SavedViewController: UIViewController {
 
     let savedScreen = SavedView()
     var user: User!
+    var activities = [Activity]()
 
     override func loadView() {
         view = savedScreen

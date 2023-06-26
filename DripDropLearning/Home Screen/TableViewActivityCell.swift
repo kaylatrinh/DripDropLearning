@@ -16,16 +16,29 @@ class TableViewActivityCell: UITableViewCell {
     var labelDescription: UILabel!
     var labelTime: UILabel!
     var imageReceipt: UIImageView!
+    var buttonSave: UIButton!
         
     //Overriding function
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.selectionStyle = .blue
+        let selectedBackgroundView = UIView()
+        selectedBackgroundView.backgroundColor = UIColor(red: 0, green: 0.5216, blue: 0.949, alpha: 1)
+        self.selectedBackgroundView = selectedBackgroundView
+//        self.sendSubviewToBack(contentView)
+//        self.contentView.isUserInteractionEnabled = false
+//        self.isUserInteractionEnabled = false
+        
+        
         //Calling setUp functions
         setupWrapperCellView()
+//        self.bringSubviewToFront(wrapperCellView)
         setupLabelName()
         setupLabelDescription()
         setupLabelTime()
         setupImageReceipt()
+        //setupButtonSave()
         initConstraints()
         
     }
@@ -41,6 +54,7 @@ class TableViewActivityCell: UITableViewCell {
         wrapperCellView.layer.shadowOffset = .zero
         wrapperCellView.layer.shadowRadius = 6.0
         wrapperCellView.layer.shadowOpacity = 0.7
+        wrapperCellView.isUserInteractionEnabled = true
         
         
         wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
@@ -77,6 +91,35 @@ class TableViewActivityCell: UITableViewCell {
         imageReceipt.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(imageReceipt)
     }
+//
+//    func setupButtonSave() {
+//        buttonSave = UIButton(type: .system)
+//        buttonSave.setTitle("", for: .normal)
+//        buttonSave.setImage(UIImage(systemName: "banner"), for: .normal)
+//        buttonSave.contentHorizontalAlignment = .fill
+//        buttonSave.contentVerticalAlignment = .fill
+//        buttonSave.imageView?.contentMode = .scaleAspectFit
+//        buttonSave.showsMenuAsPrimaryAction = true
+//        buttonSave.translatesAutoresizingMaskIntoConstraints = false
+//        wrapperCellView.addSubview(buttonSave)
+//    }
+    
+    func setupButtonSave() {
+        buttonSave = UIButton(type: .system)
+        buttonSave.setTitle("Save", for: .normal)
+        buttonSave.addTarget(self, action: #selector(buttonSaveTapped), for: .touchUpInside)
+        buttonSave.backgroundColor = .white
+        buttonSave.layer.cornerRadius = 5
+        buttonSave.layer.borderWidth = 1
+        buttonSave.layer.borderColor = UIColor.white.cgColor
+        buttonSave.translatesAutoresizingMaskIntoConstraints = false
+        buttonSave.isUserInteractionEnabled = true
+        wrapperCellView.addSubview(buttonSave)
+    }
+    
+    @objc func buttonSaveTapped() {
+        print("HERREEEEEEEEEEEEE")
+    }
     
     func initConstraints(){
         NSLayoutConstraint.activate([
@@ -92,7 +135,7 @@ class TableViewActivityCell: UITableViewCell {
                         
             labelName.topAnchor.constraint(equalTo: imageReceipt.bottomAnchor, constant: 8),
             labelName.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
-                        
+            
             labelDescription.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 4),
             labelDescription.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
             labelDescription.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 10),
@@ -100,9 +143,8 @@ class TableViewActivityCell: UITableViewCell {
             
             labelTime.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 4),
             labelTime.centerXAnchor.constraint(equalTo: labelName.centerXAnchor),
-                
-                
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 800)
+            
+            wrapperCellView.heightAnchor.constraint(equalToConstant: 750)
         ])
     }
     

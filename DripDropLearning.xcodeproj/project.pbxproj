@@ -25,6 +25,8 @@
 		0ADB38532A4961E800C64C5A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38522A4961E800C64C5A /* Comment.swift */; };
 		0ADB38562A49714000C64C5A /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38552A49714000C64C5A /* AddPostView.swift */; };
 		0ADB38582A49714F00C64C5A /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38572A49714F00C64C5A /* AddPostViewController.swift */; };
+		0ADB385A2A49D6A100C64C5A /* SaveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38592A49D6A100C64C5A /* SaveActivity.swift */; };
+		0ADB385C2A49D75E00C64C5A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB385B2A49D75E00C64C5A /* Activity.swift */; };
 		37F7CE40827000F9976A30CF /* Pods_DripDropLearning_DripDropLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */; };
 		B54E8849B7560CFC47241FA0 /* Pods_DripDropLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */; };
 		DEDF44AB72F0537FCC3B0353 /* Pods_DripDropLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */; };
@@ -84,6 +86,8 @@
 		0ADB38522A4961E800C64C5A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0ADB38552A49714000C64C5A /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
 		0ADB38572A49714F00C64C5A /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		0ADB38592A49D6A100C64C5A /* SaveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveActivity.swift; sourceTree = "<group>"; };
+		0ADB385B2A49D75E00C64C5A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearningTests.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearningTests/Pods-DripDropLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				0ADB38342A4825F800C64C5A /* UserDetails.swift */,
 				0ADB38382A48359C00C64C5A /* Post.swift */,
 				0ADB38522A4961E800C64C5A /* Comment.swift */,
+				0ADB38592A49D6A100C64C5A /* SaveActivity.swift */,
+				0ADB385B2A49D75E00C64C5A /* Activity.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -575,11 +581,13 @@
 				04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */,
 				04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */,
 				0ADB38352A4825F800C64C5A /* UserDetails.swift in Sources */,
+				0ADB385A2A49D6A100C64C5A /* SaveActivity.swift in Sources */,
 				0ADB38332A48226600C64C5A /* Register.swift in Sources */,
 				0ADB38492A48779700C64C5A /* BathtubTableViewCell.swift in Sources */,
 				0ADB382D2A48175200C64C5A /* Login.swift in Sources */,
 				0ADB38472A48778700C64C5A /* BathtubViewController.swift in Sources */,
 				0ADB38512A4956AE00C64C5A /* CommentTableViewCell.swift in Sources */,
+				0ADB385C2A49D75E00C64C5A /* Activity.swift in Sources */,
 				EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */,
 				0ADB38452A48777C00C64C5A /* BathtubView.swift in Sources */,
 				EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */,

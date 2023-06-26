@@ -37,6 +37,7 @@ class HomeView: UIView {
         tableView.separatorStyle = .none
         tableView.register(TableViewActivityCell.self, forCellReuseIdentifier: "activity")
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.allowsSelection = true
         self.addSubview(tableView)
         
         

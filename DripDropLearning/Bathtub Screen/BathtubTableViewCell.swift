@@ -46,14 +46,14 @@ class BathtubTableViewCell: UITableViewCell {
         
     func setupLabelName(){
         labelName = UILabel()
-        labelName.font = .boldSystemFont(ofSize: 16)
+        labelName.font = .boldSystemFont(ofSize: 24)
         labelName.textColor = .white
         labelName.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelName)
     }
     func setupLabelDescription(){
         labelDescription = UILabel()
-        labelDescription.font = .systemFont(ofSize: 16)
+        labelDescription.font = .systemFont(ofSize: 20)
         labelDescription.textColor = .white
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(labelDescription)
@@ -62,6 +62,7 @@ class BathtubTableViewCell: UITableViewCell {
     func setupImageReceipt(){
         imageReceipt = UIImageView()
         imageReceipt.image = UIImage(systemName: "photo")
+        imageReceipt.tintColor = UIColor(named: "Yellow Accent")
         imageReceipt.contentMode = .scaleToFill
         imageReceipt.clipsToBounds = true
         imageReceipt.layer.cornerRadius = 10
@@ -71,27 +72,47 @@ class BathtubTableViewCell: UITableViewCell {
     
     func initConstraints(){
         NSLayoutConstraint.activate([
-            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
+//            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
+//            wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+//            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+//            wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+//
+//            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
+//            labelName.leadingAnchor.constraint(equalTo: imageReceipt.trailingAnchor, constant: 8),
+//            labelName.heightAnchor.constraint(equalToConstant: 32),
+//            labelName.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
+//
+//            labelDescription.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 2),
+//            labelDescription.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
+//            labelDescription.heightAnchor.constraint(equalToConstant: 32),
+//            labelDescription.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
+//
+//            imageReceipt.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 4),
+//            imageReceipt.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
+//            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -6),
+//            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -2),
+//
+//            wrapperCellView.heightAnchor.constraint(equalToConstant: 70)
+            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 4),
             wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
+            
+            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
+            labelName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 10),
+            
+            imageReceipt.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+            imageReceipt.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 8),
+            imageReceipt.heightAnchor.constraint(equalToConstant: 300),
+            imageReceipt.widthAnchor.constraint(equalToConstant: 400),
                         
-            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
-            labelName.leadingAnchor.constraint(equalTo: imageReceipt.trailingAnchor, constant: 8),
-            labelName.heightAnchor.constraint(equalToConstant: 32),
-            labelName.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
-                        
-            labelDescription.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 2),
-            labelDescription.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
-            labelDescription.heightAnchor.constraint(equalToConstant: 32),
-            labelDescription.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
-                    
-            imageReceipt.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 4),
-            imageReceipt.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -6),
-            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -3),
+            labelDescription.topAnchor.constraint(equalTo: imageReceipt.bottomAnchor, constant: 4),
+            labelDescription.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+            labelDescription.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 10),
+            labelDescription.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -10),
                 
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 70)
+                
+            wrapperCellView.heightAnchor.constraint(equalToConstant: 380)
         ])
     }
 

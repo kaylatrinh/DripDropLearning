@@ -138,6 +138,7 @@ extension BathtubViewController: UITableViewDelegate, UITableViewDataSource{
         if let image = Utils.imageFromBase64(posts[indexPath.row].image_data) {
             cell.imageReceipt.image = image
         }
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     

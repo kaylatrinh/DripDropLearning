@@ -208,6 +208,7 @@ extension CommentViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "comments", for: indexPath) as! CommentTableViewCell
         cell.labelName.text = comments[indexPath.row].name
         cell.labelComment.text = comments[indexPath.row].comment
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
