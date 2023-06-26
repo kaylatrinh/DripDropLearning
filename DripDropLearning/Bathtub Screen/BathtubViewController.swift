@@ -13,6 +13,7 @@ class BathtubViewController: UIViewController {
     let bathtubScreen = BathtubView()
     var user: User!
     var posts = [Post]()
+    let notificationCenter = NotificationCenter.default
     
     override func loadView() {
         view = bathtubScreen
@@ -26,9 +27,30 @@ class BathtubViewController: UIViewController {
         // Do any additional setup after loading the view.
         bathtubScreen.tableView.dataSource = self
         bathtubScreen.tableView.delegate = self
-        //bathtubScreen.tableView.reloadData()
+        bathtubScreen.tableView.reloadData()
+        
+        // Add navigation bar items
+        let rightItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonTapped))
+        navigationItem.rightBarButtonItem = rightItem
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(notificationReceivedPost(notification:)),
+            name: Notification.Name("Post"),
+            object: nil)
         
         getAllPosts()
+    }
+    
+    @objc func notificationReceivedPost(notification: Notification) {
+        bathtubScreen.tableView.reloadData()
+        self.posts.append((notification.object as? Post)!)
+    }
+    
+    @objc func plusButtonTapped() {
+        let addPostScreen = AddPostViewController()
+        addPostScreen.user = self.user
+        navigationController?.pushViewController(addPostScreen, animated: true)
     }
     
     func getAllPosts() {
@@ -120,9 +142,9 @@ extension BathtubViewController: UITableViewDelegate, UITableViewDataSource{
     
     // MARK: when tapping on a table cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detailScreen = NotesDetailsViewController()
-//        detailScreen.note = self.notesStruct.notes[indexPath.row]
-//        detailScreen.user = self.user
-//        navigationController?.pushViewController(detailScreen, animated: true)
+        let commentScreen = CommentViewController()
+        commentScreen.post = self.posts[indexPath.row]
+        commentScreen.user = self.user
+        navigationController?.pushViewController(commentScreen, animated: true)
     }
 }

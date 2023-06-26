@@ -19,6 +19,12 @@
 		0ADB38452A48777C00C64C5A /* BathtubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38442A48777C00C64C5A /* BathtubView.swift */; };
 		0ADB38472A48778700C64C5A /* BathtubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38462A48778700C64C5A /* BathtubViewController.swift */; };
 		0ADB38492A48779700C64C5A /* BathtubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38482A48779700C64C5A /* BathtubTableViewCell.swift */; };
+		0ADB384D2A49568600C64C5A /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB384C2A49568600C64C5A /* CommentView.swift */; };
+		0ADB384F2A49569A00C64C5A /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB384E2A49569A00C64C5A /* CommentViewController.swift */; };
+		0ADB38512A4956AE00C64C5A /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38502A4956AE00C64C5A /* CommentTableViewCell.swift */; };
+		0ADB38532A4961E800C64C5A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38522A4961E800C64C5A /* Comment.swift */; };
+		0ADB38562A49714000C64C5A /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38552A49714000C64C5A /* AddPostView.swift */; };
+		0ADB38582A49714F00C64C5A /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB38572A49714F00C64C5A /* AddPostViewController.swift */; };
 		37F7CE40827000F9976A30CF /* Pods_DripDropLearning_DripDropLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438398D72195D7F490F1A9BD /* Pods_DripDropLearning_DripDropLearningUITests.framework */; };
 		B54E8849B7560CFC47241FA0 /* Pods_DripDropLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */; };
 		DEDF44AB72F0537FCC3B0353 /* Pods_DripDropLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C358BCD6D3E0C3C717981 /* Pods_DripDropLearningTests.framework */; };
@@ -74,6 +80,12 @@
 		0ADB38442A48777C00C64C5A /* BathtubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubView.swift; sourceTree = "<group>"; };
 		0ADB38462A48778700C64C5A /* BathtubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubViewController.swift; sourceTree = "<group>"; };
 		0ADB38482A48779700C64C5A /* BathtubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathtubTableViewCell.swift; sourceTree = "<group>"; };
+		0ADB384C2A49568600C64C5A /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		0ADB384E2A49569A00C64C5A /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		0ADB38502A4956AE00C64C5A /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		0ADB38522A4961E800C64C5A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0ADB38552A49714000C64C5A /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		0ADB38572A49714F00C64C5A /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		0B2A6E463C1BCD6CE41A2A00 /* Pods_DripDropLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripDropLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C144BBC8C4F26773263E0EB /* Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; path = "Target Support Files/Pods-DripDropLearning-DripDropLearningUITests/Pods-DripDropLearning-DripDropLearningUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38E48EFF2624BE885703CFAA /* Pods-DripDropLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripDropLearningTests.release.xcconfig"; path = "Target Support Files/Pods-DripDropLearningTests/Pods-DripDropLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 				0ADB38322A48226600C64C5A /* Register.swift */,
 				0ADB38342A4825F800C64C5A /* UserDetails.swift */,
 				0ADB38382A48359C00C64C5A /* Post.swift */,
+				0ADB38522A4961E800C64C5A /* Comment.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -157,6 +170,25 @@
 				0ADB38482A48779700C64C5A /* BathtubTableViewCell.swift */,
 			);
 			path = "Bathtub Screen";
+			sourceTree = "<group>";
+		};
+		0ADB384B2A49565B00C64C5A /* Comment Post Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB384C2A49568600C64C5A /* CommentView.swift */,
+				0ADB384E2A49569A00C64C5A /* CommentViewController.swift */,
+				0ADB38502A4956AE00C64C5A /* CommentTableViewCell.swift */,
+			);
+			path = "Comment Post Screen";
+			sourceTree = "<group>";
+		};
+		0ADB38542A49712200C64C5A /* Add Post Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB38552A49714000C64C5A /* AddPostView.swift */,
+				0ADB38572A49714F00C64C5A /* AddPostViewController.swift */,
+			);
+			path = "Add Post Screen";
 			sourceTree = "<group>";
 		};
 		54725D7495235220BF247602 /* Pods */ = {
@@ -215,6 +247,8 @@
 				EF1A2C092A412F5E002C8CCA /* Profile Screen */,
 				EF1A2C112A4132E9002C8CCA /* Saved Screen */,
 				0ADB38432A48775E00C64C5A /* Bathtub Screen */,
+				0ADB38542A49712200C64C5A /* Add Post Screen */,
+				0ADB384B2A49565B00C64C5A /* Comment Post Screen */,
 				EF1A2C0E2A4132B8002C8CCA /* Home Screen */,
 				EF1A2B8F2A3D595D002C8CCA /* AppDelegate.swift */,
 				EF1A2B912A3D595D002C8CCA /* SceneDelegate.swift */,
@@ -539,15 +573,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADB384F2A49569A00C64C5A /* CommentViewController.swift in Sources */,
 				EF1A2B942A3D595D002C8CCA /* ViewController.swift in Sources */,
 				EF1A2C1D2A4133C9002C8CCA /* HomeView.swift in Sources */,
 				EF1A2BC72A412D03002C8CCA /* RegisterView.swift in Sources */,
+				0ADB38582A49714F00C64C5A /* AddPostViewController.swift in Sources */,
 				EF1A2B902A3D595D002C8CCA /* AppDelegate.swift in Sources */,
 				0ADB383B2A484DEA00C64C5A /* Utils.swift in Sources */,
 				EF1A2C132A413306002C8CCA /* SavedViewController.swift in Sources */,
 				EF1A2BC92A412D11002C8CCA /* RegisterViewController.swift in Sources */,
 				EF1A2BC32A412010002C8CCA /* LoginView.swift in Sources */,
 				0ADB38392A48359C00C64C5A /* Post.swift in Sources */,
+				0ADB384D2A49568600C64C5A /* CommentView.swift in Sources */,
 				EF1A2C152A413312002C8CCA /* SavedView.swift in Sources */,
 				04BD706D2A429FE800342938 /* TableViewSavedActivityCell.swift in Sources */,
 				04BD70692A42959200342938 /* TableViewActivityCell.swift in Sources */,
@@ -557,10 +594,13 @@
 				EF1A2C212A4133E2002C8CCA /* FilterViewController.swift in Sources */,
 				0ADB382D2A48175200C64C5A /* Login.swift in Sources */,
 				0ADB38472A48778700C64C5A /* BathtubViewController.swift in Sources */,
+				0ADB38512A4956AE00C64C5A /* CommentTableViewCell.swift in Sources */,
 				EF1A2C0B2A412F7C002C8CCA /* ProfileView.swift in Sources */,
 				0ADB38452A48777C00C64C5A /* BathtubView.swift in Sources */,
 				EF1A2C0D2A412F8C002C8CCA /* ProfileViewController.swift in Sources */,
 				EF1A2C1B2A4133BD002C8CCA /* HomeViewController.swift in Sources */,
+				0ADB38532A4961E800C64C5A /* Comment.swift in Sources */,
+				0ADB38562A49714000C64C5A /* AddPostView.swift in Sources */,
 				EF1A2C1F2A4133D5002C8CCA /* FilterView.swift in Sources */,
 				0ADB382F2A48185900C64C5A /* APIConfigs.swift in Sources */,
 				EF1A2B922A3D595D002C8CCA /* SceneDelegate.swift in Sources */,

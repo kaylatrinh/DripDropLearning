@@ -84,10 +84,10 @@ class BathtubTableViewCell: UITableViewCell {
             labelDescription.heightAnchor.constraint(equalToConstant: 32),
             labelDescription.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
                     
-            imageReceipt.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+            imageReceipt.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 4),
             imageReceipt.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -5),
-            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -5),
+            imageReceipt.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -6),
+            imageReceipt.widthAnchor.constraint(equalTo: wrapperCellView.heightAnchor, constant: -3),
                 
             wrapperCellView.heightAnchor.constraint(equalToConstant: 70)
         ])

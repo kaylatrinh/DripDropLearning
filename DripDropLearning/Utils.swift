@@ -30,4 +30,29 @@ public class Utils {
         
         return base64String
     }
+    
+    public static func changeSpaces(comment: String) -> String {
+        var ans = ""
+        for char in comment {
+            if char == " " {
+                ans.append("-")
+            } else {
+                ans.append(char)
+            }
+        }
+        return ans
+    }
+    
+    public static func addSpaces(comment: String) -> String {
+        var ans = ""
+        for char in comment {
+            if char == "-" {
+                ans.append(" ")
+            } else {
+                ans.append(char)
+            }
+        }
+        return ans
+    }
+    
 }
