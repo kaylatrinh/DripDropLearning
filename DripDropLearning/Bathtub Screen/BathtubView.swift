@@ -15,6 +15,7 @@ class BathtubView: UIView {
     var bathtubButton: UIBarButtonItem!
     var bookmarkButton: UIBarButtonItem!
     var profileButton: UIBarButtonItem!
+    var postButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,6 +29,13 @@ class BathtubView: UIView {
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
+        
+        postButton = UIButton(type: .system)
+        postButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        postButton.setTitle("New Bathtub Post", for: .normal)
+        postButton.tintColor = UIColor(named: "Yellow Accent")
+        postButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(postButton)
         
         // Navigation Bar
         navigationBar = UINavigationBar()
@@ -45,6 +53,9 @@ class BathtubView: UIView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: navigationBar.topAnchor, constant: -8),
+            
+            postButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 4),
+            postButton.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             
             navigationBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             navigationBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),

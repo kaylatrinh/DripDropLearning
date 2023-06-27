@@ -8,27 +8,17 @@
 import UIKit
 
 class HomeView: UIView {
-
-    var imageView: UIImageView!
     var tableView: UITableView!
     var navigationBar: UINavigationBar!
     var homeButton: UIBarButtonItem!
     var bathtubButton: UIBarButtonItem!
     var bookmarkButton: UIBarButtonItem!
     var profileButton: UIBarButtonItem!
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(named: "Background")
-        
-        // Image View
-        imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = UIColor(named: "Yellow Accent")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "drop.fill") // Set the system symbol image
-        self.addSubview(imageView)
-
         
         // Table View
         tableView = UITableView()
@@ -54,13 +44,8 @@ class HomeView: UIView {
     // Setting the constraints
     func initConstraints() {
         NSLayoutConstraint.activate([
-       
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 150),
-            imageView.widthAnchor.constraint(equalToConstant: 150),
-            
-            tableView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: navigationBar.topAnchor),

@@ -14,11 +14,13 @@ class HomeViewController: UIViewController {
     
     var user: User!
     var activities = [Activity]()
+    var saved = [Save]()
 
     override func loadView() {
         view = homeScreen
         title = "Drip Drop Learning"
         self.navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.barTintColor = UIColor(named: "Background")
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
 
@@ -50,7 +52,8 @@ class HomeViewController: UIViewController {
 
         homeScreen.navigationBar.setItems([navigationItem], animated: false)
         
-        //homeScreen.buttonSave.addTarget(self, action: #selector(buttonSaveTapped), for: .touchUpInside)
+        let tableCell = TableViewActivityCell()
+        tableCell.buttonSave.addTarget(self, action: #selector(buttonSaveTapped), for: .touchUpInside)
     }
     
     // Action methods for the bottom bar buttons
@@ -73,6 +76,10 @@ class HomeViewController: UIViewController {
         let profileViewController = ProfileViewController()
         profileViewController.user = self.user
         navigationController?.pushViewController(profileViewController, animated: true)
+    }
+    
+    @objc func buttonSaveTapped(){
+        
     }
     
     func getUserDetails() {
@@ -163,6 +170,7 @@ class HomeViewController: UIViewController {
     func saveActivity(activity: Activity) {
         let savedScreen = SavedViewController()
         savedScreen.activities.append(activity)
+        print(activities)
         let message = "Saved!"
         let alert = UIAlertController(title: "Confirmation", message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default)

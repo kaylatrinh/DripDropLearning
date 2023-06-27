@@ -17,6 +17,10 @@ class SavedViewController: UIViewController {
     override func loadView() {
         view = savedScreen
         title = "Saved"
+        
+        navigationController?.navigationBar.barTintColor = UIColor(named: "Background")
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        
     }
 
     override func viewDidLoad() {
@@ -146,34 +150,31 @@ class SavedViewController: UIViewController {
 
 extension SavedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 // Adjust the number of rows as needed
+        return activities.count // Adjust the number of rows as needed
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "savedActivity", for: indexPath) as! TableViewActivityCell
+        cell.labelDescription.numberOfLines = 0
         
-        // Customize the hardcoded cell
-        if indexPath.row == 0 {
-            cell.labelName.text = "Activity #1"
-            cell.labelDescription.text = "This activity is an activity"
-            cell.labelTime.text = "Estimated time: 30mins"
-            cell.imageReceipt.image = (UIImage(systemName: "person"))
-            // Set the image for imageReceipt if needed
+        for activity in activities {
+            cell.labelName.text = activity.name
+            cell.labelDescription.text = activity.description
+            cell.labelTime.text = activity.time
+            cell.imageReceipt.image = activity.image
         }
-        if indexPath.row == 1 {
-            cell.labelName.text = "Activity #2"
-            cell.labelDescription.text = "This activity is an activity"
-            cell.labelTime.text = "Estimated time: 45mins"
-            cell.imageReceipt.image = (UIImage(systemName: "person"))
-            // Set the image for imageReceipt if needed
-        }
-        if indexPath.row == 2 {
-            cell.labelName.text = "Activity #3"
-            cell.labelDescription.text = "This activity is an activity"
-            cell.labelTime.text = "Estimated time: 60mins"
-            cell.imageReceipt.image = (UIImage(systemName: "person"))
-            // Set the image for imageReceipt if needed
-        }
+        
+//        // Customize the hardcoded cell
+//        if indexPath.row == 0 {
+//            cell.labelName.text = "Edible Dirt"
+//            cell.labelDescription.text = "Materials: \n- Chocolate Pudding \n- Regular Graham Crackers \n- Gummy Worms \n- M&M's \n- Clear Cups \n\nStep by Step: \n1. Put most of the pudding in the bottom of the cup, leaving a bit for the end \n2. Crush the graham crackers and fill the next layer of the cup \n3. Using the last of the pudding, put a small layer \n4.Decorate with the M&Ms and gummy worms\n"
+//            cell.labelTime.text = "Estimated time: 20mins"
+//            cell.imageReceipt.image = (UIImage(named: "Edible Dirt Image"))
+//            // MARK: THIS CHANGES THE BACKGROUND COLOR TO CLEAR
+//            cell.backgroundColor = UIColor.clear
+//            let activity = Activity(name: "Edible Dirt", description: "Materials: \n- Chocolate Pudding \n- Regular Graham Crackers \n- Gummy Worms \n- M&M's \n- Clear Cups \n\nStep by Step: \n1. Put most of the pudding in the bottom of the cup, leaving a bit for the end \n2. Crush the graham crackers and fill the next layer of the cup \n3. Using the last of the pudding, put a small layer \n4.Decorate with the M&Ms and gummy worms\n", time: "Estimated time: 20mins", image: (UIImage(named: "Edible Dirt Image"))!)
+//            // Set the image for imageReceipt if needed
+//        }
         
         return cell
     }

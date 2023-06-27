@@ -38,6 +38,7 @@ class TableViewActivityCell: UITableViewCell {
         setupLabelDescription()
         setupLabelTime()
         setupImageReceipt()
+        setupButtonSave()
         //setupButtonSave()
         initConstraints()
         
@@ -104,14 +105,24 @@ class TableViewActivityCell: UITableViewCell {
 //        wrapperCellView.addSubview(buttonSave)
 //    }
     
+//    func setupButtonSave() {
+//        buttonSave = UIButton(type: .system)
+//        buttonSave.setTitle("Save", for: .normal)
+//        buttonSave.addTarget(self, action: #selector(buttonSaveTapped), for: .touchUpInside)
+//        buttonSave.backgroundColor = .white
+//        buttonSave.layer.cornerRadius = 5
+//        buttonSave.layer.borderWidth = 1
+//        buttonSave.layer.borderColor = UIColor.white.cgColor
+//        buttonSave.translatesAutoresizingMaskIntoConstraints = false
+//        buttonSave.isUserInteractionEnabled = true
+//        wrapperCellView.addSubview(buttonSave)
+//    }
     func setupButtonSave() {
         buttonSave = UIButton(type: .system)
-        buttonSave.setTitle("Save", for: .normal)
+        buttonSave.setTitle("", for: .normal)
+        buttonSave.setImage(UIImage(systemName: "bookmark"), for: .normal)
+        buttonSave.tintColor = UIColor(named: "Yellow Accent")
         buttonSave.addTarget(self, action: #selector(buttonSaveTapped), for: .touchUpInside)
-        buttonSave.backgroundColor = .white
-        buttonSave.layer.cornerRadius = 5
-        buttonSave.layer.borderWidth = 1
-        buttonSave.layer.borderColor = UIColor.white.cgColor
         buttonSave.translatesAutoresizingMaskIntoConstraints = false
         buttonSave.isUserInteractionEnabled = true
         wrapperCellView.addSubview(buttonSave)
@@ -143,8 +154,29 @@ class TableViewActivityCell: UITableViewCell {
             
             labelTime.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 4),
             labelTime.centerXAnchor.constraint(equalTo: labelName.centerXAnchor),
+//            labelTime.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -4)
             
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 750)
+            buttonSave.topAnchor.constraint(equalTo: labelTime.bottomAnchor, constant: 4),
+            buttonSave.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -10),
+            buttonSave.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -10)
+            
+//            imageReceipt.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+//            imageReceipt.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
+//            imageReceipt.heightAnchor.constraint(equalToConstant: 300),
+//            imageReceipt.widthAnchor.constraint(equalToConstant: 300),
+//
+//            labelName.topAnchor.constraint(equalTo: imageReceipt.bottomAnchor, constant: 8),
+//            labelName.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+//
+//            labelDescription.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 4),
+//            labelDescription.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
+//            labelDescription.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 10),
+//            labelDescription.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -10),
+//
+//            labelTime.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 4),
+//            labelTime.centerXAnchor.constraint(equalTo: labelName.centerXAnchor),
+//
+//            wrapperCellView.heightAnchor.constraint(equalToConstant: 750)
         ])
     }
     

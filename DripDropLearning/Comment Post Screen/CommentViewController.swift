@@ -18,6 +18,9 @@ class CommentViewController: UIViewController {
     
     override func loadView() {
         view = commentScreen
+        
+        navigationController?.navigationBar.barTintColor = UIColor(named: "Background")
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
     
     override func viewDidLoad() {

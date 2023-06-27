@@ -18,6 +18,9 @@ class ProfileViewController: UIViewController {
         view = profileScreen
         title = "Profile"
         
+        navigationController?.navigationBar.barTintColor = UIColor(named: "Background")
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        
         getUserDetails()
     }
 

@@ -19,6 +19,9 @@ class AddPostViewController: UIViewController {
     override func loadView() {
         view = addPostScreen
         title = "Create New Post"
+        
+        navigationController?.navigationBar.barTintColor = UIColor(named: "Background")
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
 
     override func viewDidLoad() {
@@ -27,7 +30,7 @@ class AddPostViewController: UIViewController {
         // Do any additional setup after loading the view.
         addPostScreen.buttonPost.addTarget(self, action: #selector(postButtonTapped), for: .touchUpInside)
         
-        addPostScreen.buttonPost.menu = getMenuImagePicker()
+        addPostScreen.buttonImage.menu = getMenuImagePicker()
     }
     
     @objc func postButtonTapped() {
